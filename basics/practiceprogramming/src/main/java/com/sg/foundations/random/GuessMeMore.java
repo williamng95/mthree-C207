@@ -1,4 +1,4 @@
-package com.sg.foundations.flowcontrol.random;
+package com.sg.foundations.random;
 
 import java.util.Random;
 import java.util.Scanner;
