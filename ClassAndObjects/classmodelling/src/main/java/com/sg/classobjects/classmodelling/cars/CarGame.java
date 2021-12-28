@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.Car;
+package com.sg.classobjects.classmodelling.cars;
 // simple, non-physical car class model for racing game
 
 // models constant accleration until top speed. 

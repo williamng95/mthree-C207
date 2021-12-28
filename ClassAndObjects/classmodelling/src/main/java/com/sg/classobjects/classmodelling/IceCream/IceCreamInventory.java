@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.IceCream;
+package com.sg.classobjects.classmodelling.icecream;
 // include a method to quickly verify if item is already expired
 
 import java.time.LocalDate;

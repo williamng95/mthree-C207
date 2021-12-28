@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.House;
+package com.sg.classobjects.classmodelling.houses;
 // a simple house design class
 
 // house design contains components that make up the house, contains an add element to array function.

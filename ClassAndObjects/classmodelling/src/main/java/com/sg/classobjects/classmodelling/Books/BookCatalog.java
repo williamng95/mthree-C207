@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.Books;
+package com.sg.classobjects.classmodelling.books;
 
 public class BookCatalog {
     

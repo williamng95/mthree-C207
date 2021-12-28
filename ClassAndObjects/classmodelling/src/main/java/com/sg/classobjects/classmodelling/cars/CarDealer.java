@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.Car;
+package com.sg.classobjects.classmodelling.cars;
 // a simple class for tracking cars in a dealer's inventory
 
 // basic parameters such as make and model of car, and price.

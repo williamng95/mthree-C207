@@ -24,7 +24,7 @@ public final class InterestCalc {
         int numYears = Integer.valueOf(userInput.nextLine());
         System.out.print("What is the annual interest rate %? ");
         double annualInterest = Double.valueOf(userInput.nextLine());
-        System.out.println("How often is interest compounded? KEy in the number.");
+        System.out.println("How often is interest compounded? Key in the number.");
         System.out.print("(1.annually 2.quarterly 3.monthly 4.daily): ");
         int chosenPeriod = COMPOND_PERIODS[Integer.valueOf(userInput.nextLine()) - 1];
 

@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.Airplane;
+package com.sg.classobjects.classmodelling.airplanes;
 // a simple aircraft model class for simulator.
 // only describes how the aircraft is positioned and speed.
 // a method included to 'accelerate' plane

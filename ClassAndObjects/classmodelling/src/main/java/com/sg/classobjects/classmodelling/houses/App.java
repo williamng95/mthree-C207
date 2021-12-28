@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.House;
+package com.sg.classobjects.classmodelling.houses;
 
 import java.util.Arrays;
 

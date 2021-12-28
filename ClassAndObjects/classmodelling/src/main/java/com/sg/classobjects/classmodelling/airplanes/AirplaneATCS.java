@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.Airplane;
+package com.sg.classobjects.classmodelling.airplanes;
 // a simple ariplane for air traffic control
 // speed, location, height only
 

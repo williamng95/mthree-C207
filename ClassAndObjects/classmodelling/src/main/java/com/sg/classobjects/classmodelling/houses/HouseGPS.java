@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.House;
+package com.sg.classobjects.classmodelling.houses;
 
 public class HouseGPS {
     // only constructor + getter/setter, do not expect house to change after

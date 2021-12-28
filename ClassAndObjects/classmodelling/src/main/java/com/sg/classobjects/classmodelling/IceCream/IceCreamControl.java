@@ -1,4 +1,4 @@
-package com.sg.classobjects.classmodelling.IceCream;
+package com.sg.classobjects.classmodelling.icecream;
 // basic ice cream churning parameters only
 
 public class IceCreamControl {
