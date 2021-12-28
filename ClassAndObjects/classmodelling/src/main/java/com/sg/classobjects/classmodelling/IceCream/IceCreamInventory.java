@@ -1,4 +1,5 @@
 package com.sg.classobjects.classmodelling.IceCream;
+// include a method to quickly verify if item is already expired
 
 import java.time.LocalDate;
 
@@ -53,5 +54,8 @@ public class IceCreamInventory {
 
     public void setBestBefore(LocalDate bestBefore) {
         this.bestBefore = bestBefore;
+    }
+    public boolean isExpire(){
+        return LocalDate.now().compareTo(bestBefore)>=0;
     }
 }
