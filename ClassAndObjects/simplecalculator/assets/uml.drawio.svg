@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="461px"
+   height="184px"
+   viewBox="-0.5 -0.5 461 184"
+   content="&lt;mxfile&gt;&lt;diagram id=&quot;aoIZlMp7M4RHfoXpKvwG&quot; name=&quot;Page-1&quot;&gt;7VjbbqMwEP0apO5DV1wSmj429LIrpdqqWWmfHXDAqvEgY3Lp1+8YDISQtmSbal8SoQgfz9jMnJnxgOUF6eZBkix5hIhyy7WjjeXdWq577fj4r4FtBfjOqAJiyaIKclpgzl6pAW2DFiyieUdQAXDFsi4YghA0VB2MSAnrrtgSeHfXjMS0B8xDwvvoHxappEInY7vFf1AWJ/XOjm1mFiR8iSUUwuxnuZ5d/qrplNRrGSBPSATrHci7s7xAAqjqLt0ElGvX1m6r9O7fmG2eW1Khhii4lcKK8MKYPmdpxmlAeFhwokCa51Tb2jf5mqWcCBxNlyDU3Mw4OCacxQLvQ9ydSgRWVCqGbr0xEwoyRMOE8WhGtlDoZ8wV+qweTROQ7BWXJdysidNSmQhx/Y7EXGsibCMqaY4yT7Xhzh70SDYdwRnJlQFC4JxkOVs0ZqRExkxMQSlIjZC2NACO7tA+8O7LH+J9fxsKtOV0swMZ/z9QSKmSWxQxs74JBZMq7siM123gNXmR7AbdxIDEBHvcLN0SjjeG88P8ez3+L3HI0TvPNC84bnWj0xgK7Z39SEADVcmQhBdae0dAFRqM8z2ojg5Ol+rN2MgzEjIRz0qZ21GLPBvLNQSou+Rl3iQsiqjQvIIiilQkasYyYEKVnhlP8UJfBfb3sTXGBw9w7LRjvLS4RIIF2kJYSSVFH6ypjpIjyHcHk1+z7Q8ju5b7DNejHtc9RjkrmaoYrSuf8090pkgMpy1/vzW9t5dOj2Ovz7F3gE9OFpQ/Qc4UA72+rGT3eP6PVI7dYVROPs/k+ACTU71mFF3UuRo0efutm8QYSZ5jlzZrnbxYoKPwDHXto3XTQh/JfHu0YsRWeMB/rHYuOKeOUn/o6eKe4HTxe3F6k2XnhuKLGwrPHdBR2Md2FGa7Z2y3iYh1cjb7Dehg/AFnGuHIsSCKTnX/nPcCrbF0UOxdHexswravLQtNv9ttKpUWT6kofmX6xMmNvJJYGsxR05WVBxqmjkCRU/lTZIWRwdcNfHmRndq4c3sufR/khT84L97ptQ6lwdXo85Vvcu61vpLK5n37Iy5P0Gxdv9VsZdkMILswLcsKUKHXIKFX3hWIoK49tJYLDy6Ehai70Lk+nD6oJgMLhHt0VOGw/ahTnWbthzPv7i8=&lt;/diagram&gt;&lt;/mxfile&gt;"
+   style="background-color: rgb(0, 0, 0);"
+   id="svg976"
+   sodipodi:docname="uml.drawio.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview978"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.0139506"
+     inkscape:cx="225.17931"
+     inkscape:cy="121.89972"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g974" />
+  <defs
+     id="defs914">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1224">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1220" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1222" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1216">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1212" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1214" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1208">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1204" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1206" />
+    </linearGradient>
+    <clipPath
+       id="mx-clip-4-31-202-26-0">
+      <rect
+         x="4"
+         y="31"
+         width="202"
+         height="26"
+         id="rect902" />
+    </clipPath>
+    <clipPath
+       id="mx-clip-4-65-202-120-0">
+      <rect
+         x="4"
+         y="65"
+         width="202"
+         height="120"
+         id="rect905" />
+    </clipPath>
+    <clipPath
+       id="mx-clip-264-31-192-74-0">
+      <rect
+         x="264"
+         y="31"
+         width="192"
+         height="74"
+         id="rect908" />
+    </clipPath>
+    <clipPath
+       id="mx-clip-264-113-192-72-0">
+      <rect
+         x="264"
+         y="113"
+         width="192"
+         height="72"
+         id="rect911" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1208"
+       id="linearGradient1210"
+       x1="-0.5"
+       y1="103.25"
+       x2="210.5"
+       y2="103.25"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1216"
+       id="linearGradient1218"
+       x1="-0.5"
+       y1="12.75"
+       x2="210.5"
+       y2="12.75"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1224"
+       id="linearGradient1226"
+       x1="259.5"
+       y1="12.75"
+       x2="460.5"
+       y2="12.75"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="g974">
+    <path
+       d="M 0 26 L 0 0 L 210 0 L 210 26"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path916"
+       style="fill-opacity:1;fill:url(#linearGradient1218);stroke:#000000;stroke-opacity:1" />
+    <path
+       d="M 0 26 L 0 180 L 210 180 L 210 26"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path918"
+       style="fill-opacity:1;fill:url(#linearGradient1210);stroke:#000000;stroke-opacity:1;stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none" />
+    <path
+       d="M 0 26 L 210 26"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path920" />
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       font-weight="bold"
+       pointer-events="none"
+       text-anchor="middle"
+       font-size="12px"
+       id="g924"
+       style="fill:#000000">
+      <text
+         x="104.5"
+         y="17.5"
+         id="text922"
+         style="fill:#000000">SimpleCalculator</text>
+    </g>
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       pointer-events="none"
+       clip-path="url(#mx-clip-4-31-202-26-0)"
+       font-size="12px"
+       id="g928"
+       style="fill:#000000">
+      <text
+         x="5.5"
+         y="43.5"
+         id="text926"
+         style="fill:#000000">- lastResult: double</text>
+    </g>
+    <path
+       d="M 0 56 L 210 56"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path930" />
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       pointer-events="none"
+       clip-path="url(#mx-clip-4-65-202-120-0)"
+       font-size="12px"
+       id="g940"
+       style="fill:#000000">
+      <text
+         x="5.5"
+         y="77.5"
+         id="text932"
+         style="fill:#000000">+ add(double, double): double</text>
+      <text
+         x="5.5"
+         y="91.5"
+         id="text934"
+         style="fill:#000000">+ subtract (double, double): double</text>
+      <text
+         x="5.5"
+         y="105.5"
+         id="text936"
+         style="fill:#000000">+ multiply(double, double): double</text>
+      <text
+         x="5.5"
+         y="119.5"
+         id="text938"
+         style="fill:#000000">+ divide(double, double): double</text>
+    </g>
+    <path
+       d="M 260 26 L 260 0 L 460 0 L 460 26"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path942"
+       style="fill-opacity:1;fill:url(#linearGradient1226);stroke:#000000;stroke-opacity:1" />
+    <path
+       d="M 260 26 L 260 180 L 460 180 L 460 26"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path944" />
+    <path
+       d="M 260 26 L 460 26"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path946" />
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       font-weight="bold"
+       pointer-events="none"
+       text-anchor="middle"
+       font-size="12px"
+       id="g950"
+       style="fill:#000000">
+      <text
+         x="359.5"
+         y="17.5"
+         id="text948"
+         style="fill:#000000">App</text>
+    </g>
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       pointer-events="none"
+       clip-path="url(#mx-clip-264-31-192-74-0)"
+       font-size="12px"
+       id="g960"
+       style="fill:#000000">
+      <text
+         x="265.5"
+         y="43.5"
+         id="text952"
+         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- calculator: SimpleCalculator</text>
+      <text
+         x="265.5"
+         y="57.5"
+         id="text954"
+         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- menuOptions: String[]</text>
+      <text
+         x="265.5"
+         y="71.5"
+         id="text956"
+         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- result: double</text>
+      <text
+         x="265.5"
+         y="85.5"
+         id="text958"
+         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- userInput: Scanner</text>
+    </g>
+    <path
+       d="M 260 104 L 460 104"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path962" />
+    <g
+       fill="#FFFFFF"
+       font-family="Helvetica"
+       pointer-events="none"
+       clip-path="url(#mx-clip-264-113-192-72-0)"
+       font-size="12px"
+       id="g972"
+       style="fill:#000000">
+      <text
+         x="265.5"
+         y="125.5"
+         id="text964"
+         style="fill:#000000">+ appLoop(): void</text>
+      <text
+         x="265.5"
+         y="139.5"
+         id="text966"
+         style="fill:#000000">+ main(): void</text>
+      <text
+         x="265.5"
+         y="153.5"
+         id="text968"
+         style="fill:#000000">+ doCalculate(): coid</text>
+      <text
+         x="265.5"
+         y="167.5"
+         id="text970"
+         style="fill:#000000">+ menu(): void</text>
+    </g>
+  </g>
+</svg>
