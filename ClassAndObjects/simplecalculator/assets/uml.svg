@@ -113,20 +113,6 @@
          id="text922"
          style="fill:#000000">SimpleCalculator</text>
     </g>
-    <g
-       fill="#FFFFFF"
-       font-family="Helvetica"
-       pointer-events="none"
-       clip-path="url(#mx-clip-4-31-202-26-0)"
-       font-size="12px"
-       id="g928"
-       style="fill:#000000">
-      <text
-         x="5.5"
-         y="43.5"
-         id="text926"
-         style="fill:#000000">- lastResult: double</text>
-    </g>
     <path
        d="M 0 56 L 210 56"
        fill="none"
@@ -216,7 +202,7 @@
          x="265.5"
          y="43.5"
          id="text952"
-         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- calculator: SimpleCalculator</text>
+         style="fill:#000000;stroke-width:1.00157;stroke-miterlimit:10;stroke-dasharray:none">- operatorSign: String[]</text>
       <text
          x="265.5"
          y="57.5"
@@ -224,14 +210,17 @@
          style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- menuOptions: String[]</text>
       <text
          x="265.5"
-         y="71.5"
-         id="text956"
-         style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- result: double</text>
-      <text
-         x="265.5"
          y="85.5"
          id="text958"
          style="stroke-width:1.0015748;stroke-miterlimit:10;stroke-dasharray:none;fill:#000000">- userInput: Scanner</text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="287.9877"
+         y="46.174431"
+         id="text21460"><tspan
+           sodipodi:role="line"
+           id="tspan21458"></tspan></text>
     </g>
     <path
        d="M 260 104 L 460 104"
@@ -252,7 +241,7 @@
          x="265.5"
          y="125.5"
          id="text964"
-         style="fill:#000000">+ appLoop(): void</text>
+         style="fill:#000000">- appLoop(): void</text>
       <text
          x="265.5"
          y="139.5"
@@ -262,12 +251,12 @@
          x="265.5"
          y="153.5"
          id="text968"
-         style="fill:#000000">+ doCalculate(): coid</text>
+         style="fill:#000000">- computeResult(int): coid</text>
       <text
          x="265.5"
          y="167.5"
          id="text970"
-         style="fill:#000000">+ menu(): void</text>
+         style="fill:#000000">- printMenu():int</text>
     </g>
   </g>
 </svg>

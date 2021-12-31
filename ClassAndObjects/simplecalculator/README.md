@@ -1,4 +1,12 @@
 # Simple Calculator App
+## Overview
+2 classes:
+- App.java to handle I/O and parsing
+- SimpleCalculator.java for math logic, simple static methods, no persistence built in
 
-## UML
+### Flowchart
+![](assets/calcFlow.svg)
+### UML
 ![](assets/uml.svg)
+
+test.java is the entry point to test this app.
