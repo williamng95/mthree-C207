@@ -1,0 +1,86 @@
+<mxfile host="65bd71144e" scale="1" border="5">
+    <diagram id="p54YMgRuItMHHx6-Ws6Y" name="Page-1">
+        <mxGraphModel dx="795" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;backgroundOutline=0;" parent="1" source="2" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="185" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="135" y="110" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;backgroundOutline=0;" parent="1" source="19" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Enter calculator loop" style="whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="125" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;verticalAlign=middle;backgroundOutline=0;" parent="1" source="21" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="loop Entry" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="125" y="310" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=none;html=1;verticalAlign=middle;backgroundOutline=0;" parent="1" source="23" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Print thank you" style="whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="125" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="edgeStyle=none;html=1;verticalAlign=middle;backgroundOutline=0;" parent="1" source="29" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Print menu,&lt;br&gt;&amp;nbsp;request user input" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="430" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Exit" style="edgeStyle=none;html=1;verticalAlign=middle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;backgroundOutline=0;" parent="1" source="31" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-5" y="830.0000000000002" as="sourcePoint"/>
+                        <mxPoint x="195" y="770" as="targetPoint"/>
+                        <Array as="points"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="Math" style="edgeStyle=none;html=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;backgroundOutline=0;" parent="1" source="31" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Operation choice?" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="125" y="560" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="End" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="125" y="810" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=none;html=1;verticalAlign=bottom;backgroundOutline=0;" parent="1" source="44" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Request operands from user" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="305" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="edgeStyle=none;html=1;verticalAlign=bottom;backgroundOutline=0;" parent="1" source="46" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Pass operation choice+ operands to calculator methods" style="whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=none;html=1;verticalAlign=bottom;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBorderColor=none;backgroundOutline=0;" parent="1" source="48" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="485" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="705" y="350"/>
+                            <mxPoint x="365" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="Print result" style="whiteSpace=wrap;html=1;strokeWidth=2;backgroundOutline=0;" parent="1" vertex="1">
+                    <mxGeometry x="645" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="appLoop()" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeWidth=5;perimeterSpacing=5;fillColor=none;align=left;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;" vertex="1" parent="1">
+                    <mxGeometry x="65" y="290" width="720" height="370" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
