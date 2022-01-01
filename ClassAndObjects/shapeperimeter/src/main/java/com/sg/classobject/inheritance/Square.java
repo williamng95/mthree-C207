@@ -1,0 +1,9 @@
+package com.sg.classobject.inheritance;
+
+public class Square extends Rectangle {
+
+    public Square(double side) {
+        super(side, side);
+    }
+
+}
