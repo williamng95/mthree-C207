@@ -1,9 +1,8 @@
 package com.sg.classobject.inheritance;
 
-public abstract class Shape {
-    protected String color;
+public interface Shape {
 
-    public abstract double getArea();
+    public double getArea();
 
-    public abstract double getPerimeter();
+    public double getPerimeter();
 }

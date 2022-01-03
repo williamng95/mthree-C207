@@ -1,20 +1,24 @@
 package com.sg.classobject.inheritance;
 
-public class Circle extends Shape {
-    protected double radius;
+public class Circle extends Ellipse {
+    private double radius;
 
+    // no need to reimplement area and perimeter, ellipse equations resolve exactly
+    // for circle.
     public Circle(double radius) {
+        super(radius, radius);
         this.radius = radius;
     }
 
-    @Override
-    public double getArea() {
-        return Math.PI * this.radius * this.radius;
+    public double getRadius() {
+        return radius;
     }
 
-    @Override
-    public double getPerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
+    public void setRadius(double radius) {
+        this.radius = radius;
+        // recompute area and radius on setting radius
+        this.setArea();
+        this.setPerimeter();
 
+    }
 }

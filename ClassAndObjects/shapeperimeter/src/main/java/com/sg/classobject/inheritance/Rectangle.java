@@ -7,10 +7,17 @@ public class Rectangle extends Polygon {
         super(new double[] { width, height, width, height });
         this.width = width;
         this.height = height;
+        this.setArea();
+    }
+
+    @Override
+    public void setArea() {
+        this.area = this.width * this.height;
     }
 
     @Override
     public double getArea() {
-        return this.width * this.height;
+        System.out.printf("Area of shape: %f%n", this.area);
+        return this.area;
     }
 }
