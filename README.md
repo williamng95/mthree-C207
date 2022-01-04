@@ -92,7 +92,7 @@ files stored on a local system. No prior programming experience is required.
 -  The Java DateTime API
 -  BigDecimal
 -  Lambdas and Streams
-ADVANCED JAVA
+### ADVANCED JAVA
 -  The Spring Framework and Spring DI
 -  Maven
 ### RELATIONAL DATABASES AND SQL

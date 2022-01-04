@@ -2,7 +2,7 @@
 
 This project demonstrates some interface and inheritance capabilities of Java.
 
-The required implementation revolves around shapes such as polygons and circles.
+The implementation revolves around shapes such as polygons and circles.
 
 
 ## UML
@@ -28,8 +28,8 @@ Some simple examples of polymorphism is shown in App.java.
 
 
 ## Learning points
-On `super()` call in the contructor, the child classes methods are not created/do not exist yet.
+On `super()` call in the contructor, the child class' methods are not created/do not exist yet.
 
-As a result, if there are methods which are implemented as abstract on parent and that need to be called during initialization, these methods should be in the child constructor after the `super()` call. 
+As a result, if there are methods which are implemented on parent and that need to be called during initialization, these methods should be in the child constructor after the `super()` call. 
 
-Eg: Rectangles and Triangles call `this.setArea()` after `super()`, instead of setting `this.setsetArea` in Polygon's constructor.
+Eg: Rectangles and Triangles call `this.setArea()` after `super()`, instead of calling `this.setsetArea()` in Polygon's constructor.
