@@ -9,7 +9,7 @@ public class UserInterface implements UserIO {
     
     @Override
     public void print(String message) {
-        System.out.printf("%n%s", message);
+        System.out.printf("%s%n", message);
     }
 
     @Override
