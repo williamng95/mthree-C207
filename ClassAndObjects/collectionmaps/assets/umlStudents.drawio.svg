@@ -1,0 +1,133 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="291px" height="381px" viewBox="-0.5 -0.5 291 381" content="&lt;mxfile scale=&quot;1&quot; border=&quot;10&quot;&gt;&lt;diagram id=&quot;aoIZlMp7M4RHfoXpKvwG&quot; name=&quot;Page-1&quot;&gt;3Vjfb5swEP5rkLaHSPxI0r02SbtW2rSHaNqzAwasGcwck6b763fG54AhtGs0TQ15gPPns8/fnZ34ixeti+NnSar8q0go90I/OXrRxgvDZTCHpwaee0AmWWKgoAW27DdF0Ee0ZgndO45KCK5Y5YKxKEsaKwcjUoon1y0V3I1akYwOgG1M+BD9wRKVG/TTwm/xB8qy3EYOfOzZkfhnJkVdYrxSlNT0FMROg677nCTiqQNFd160lkIoYxXHNeU6qzZjZtz9SO9pyZKW6m8GhEsz4kB4jbRxYerZ5oEmkBZsNlSiVa4KDq0ATOOufUaXgNBe1DJGrxC3giIyo+gWLk4JgC1FRUGVfAYfSTlR7ODOT7C42cmvZQkGEh0hPT9DeslhGavKob78VetCrApYJSu96BZ6/eoIz4a4b/CZEpXpm3f6FD2qGeEsw3ExpIPKdk6wMnw3kVMB6dKbmQvpBPfCKG0+42NZByAFLGbFh61HHT8lUAELu0OcGSGFrB9lJweIBb7vqXz81hm867sCZhgO4KqP5VIXwX4dWM7BOP2LisZpqjpVG5t7SPq/Lrn7fHGdl20fnY9KslJ92Cp4ZR9N7IOAo/L2wr0jUpKSxFBymZnG9XN77JeMNTTGt+zV8/TCtaWJxrSZb0S949QtctJgk2drKmzJtvbks3DPBemd61RDE+OKF45yt9evPnFTceR9Ms+lYyLkv4j+rxQXU/iN6vAyhTS0rHUp1546OVCpGIi2W3PV3jSX8RVevDfmlrcS4AVbRwutlGld0FBDyRmE2L4nBeNarD5QfqB6Vu+M1NEB6fFlsTMUMThgYcUtauLACsGnVmGGN4jlHXUZLv1/IHwWExM+Ows0AqQjcCajQ2bQUTfkqhr9tjEpyyaj71iPvKabrvwUL5xTPA/OnOLlmVN88/ZDDM3276Cmr/NvW3T3Bw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 145 270 L 145 293.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 145 298.88 L 141.5 291.88 L 145 293.63 L 148.5 291.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="10" y="10" width="270" height="260" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 272px; height: 260px; padding-top: 10px; margin-left: 10px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; width: 270px; height: 260px; overflow: hidden; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap; ">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <font color="#ffffff">
+                                        <i>
+                                            &lt;&lt;Interface&gt;&gt;
+                                        </i>
+                                        <br/>
+                                        <b>
+                                            UserIO
+                                        </b>
+                                    </font>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + print(String): void
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readString(String): String
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readInt(String): int
+                                        <br/>
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readInt(String, int, int): int
+                                        <br/>
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readDouble(String): double
+                                        <br/>
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readDouble(String, double, double): double
+                                        <br/>
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readFloat(String): float
+                                        <br/>
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readFloat(String, float, float): float
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readLong(String): long
+                                    </font>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <font color="#ffffff">
+                                        + readLong(String, long, long): long
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="10" y="22" fill="#000000" font-family="Helvetica" font-size="12px">
+                    &lt;&lt;Interface&gt;&gt;...
+                </text>
+            </switch>
+        </g>
+        <rect x="15" y="300" width="260" height="70" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 262px; height: 70px; padding-top: 300px; margin-left: 15px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; width: 260px; height: 70px; overflow: hidden; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap; ">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <font color="#ffffff">
+                                        <b>
+                                            UserInterface
+                                        </b>
+                                    </font>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    - userInput: Scanner
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="15" y="312" fill="#000000" font-family="Helvetica" font-size="12px">
+                    UserInterface...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
