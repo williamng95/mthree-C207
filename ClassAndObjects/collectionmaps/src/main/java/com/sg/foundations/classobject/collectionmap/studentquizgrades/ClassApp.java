@@ -11,7 +11,8 @@ public class ClassApp extends UserInterface {
     String[] classListOptions = { "1. View Nominal Roll", "2. View Student details", "3. View Student Summary" };
 
     public void appLoop() {
-        switch (printMenu()) {
+        // int a = printMenu();
+        switch (this.printMenu()) {
             case 3:
                 this.removeStudent();
                 break;

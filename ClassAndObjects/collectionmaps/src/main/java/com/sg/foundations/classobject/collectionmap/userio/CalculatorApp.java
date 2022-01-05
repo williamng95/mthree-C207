@@ -21,7 +21,7 @@ public class CalculatorApp {
 
         userInput.print("Please enter one of the following options: (number only)");
         for (int i = 0; i < menuOptions.length; i++) {
-            userInput.print(String.format("%d. %s%n", i + 1, menuOptions[i]));
+            userInput.print(String.format("%d. %s", i + 1, menuOptions[i]));
         }
         return userInput.readInt("Your Input: ", 1, this.menuOptions.length);
 
@@ -35,7 +35,6 @@ public class CalculatorApp {
         ;
         userInput.print(String.format("You chose to %s %f and %f.%n", this.menuOptions[choice].toLowerCase(), firstNum,
                 secondNum));
-        userInput.print(String.format("%f %s %f = ", firstNum, this.operatorSign[choice], secondNum));
 
         switch (choice) {
             case 0:
@@ -52,7 +51,7 @@ public class CalculatorApp {
                 break;
 
         }
-        userInput.print(String.format("%f%n", result));
+        userInput.print(String.format("%f %s %f = %f%n", firstNum, this.operatorSign[choice], secondNum, result));
 
     }
 
