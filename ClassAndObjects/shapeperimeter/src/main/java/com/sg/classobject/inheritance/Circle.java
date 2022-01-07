@@ -16,9 +16,5 @@ public class Circle extends Ellipse {
 
     public void setRadius(double radius) {
         this.radius = radius;
-        // recompute area and radius on setting radius
-        this.setArea();
-        this.setPerimeter();
-
     }
 }

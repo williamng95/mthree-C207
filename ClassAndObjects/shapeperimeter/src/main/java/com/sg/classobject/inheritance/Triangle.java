@@ -4,24 +4,22 @@ public class Triangle extends Polygon {
 
     public Triangle(double[] sideList) {
         super(sideList);
-        this.setArea();
     }
 
     public Triangle(double sideLength) {
         // overload for equilateral triangle
         super(new double[] { sideLength, sideLength, sideLength });
-        this.setArea();
     }
 
     @Override
-    public void setArea() {
+    public double getArea() {
         // heron's formula
         double s = this.getPerimeter()/2;
-        this.area = Math.sqrt(s);
+        double area = Math.sqrt(s);
         for (double d : this.sideList) {
-            this.area *= Math.sqrt((s - d));
+            area *= Math.sqrt((s - d));
         }
-        
+        return area;
     }
 
 }

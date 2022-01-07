@@ -32,4 +32,4 @@ On `super()` call in the contructor, the child class' methods are not created/do
 
 As a result, if there are methods which are implemented on parent and that need to be called during initialization, these methods should be in the child constructor after the `super()` call. 
 
-Eg: Rectangles and Triangles call `this.setArea()` after `super()`, instead of calling `this.setsetArea()` in Polygon's constructor.
+Eg: Rectangles and Triangles call `this.setArea()` after `super()`, instead of calling `this.setArea()` in Polygon's constructor.
