@@ -11,6 +11,14 @@ public abstract class Polygon implements Shape {
         this.numSides = sideList.length;
     }
     
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public double getPerimeter() {
         double perimeter = 0;
