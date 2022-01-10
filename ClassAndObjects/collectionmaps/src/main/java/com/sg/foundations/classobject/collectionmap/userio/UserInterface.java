@@ -1,6 +1,11 @@
 package com.sg.foundations.classobject.collectionmap.userio;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class UserInterface implements UserIO {
     // no error handling on read.
@@ -14,14 +19,7 @@ public class UserInterface implements UserIO {
 
     @Override
     public double readDouble(String prompt) {
-        // refactor with recursion
-        this.print(prompt);
-        boolean hasValue = this.userInput.hasNextDouble();
-        String value = this.userInput.nextLine();
-        if (hasValue) {
-            return Double.valueOf(value);
-        }
-        return this.readLong("Please enter a double!");
+        return (double) this.readNumber(prompt, "double");
     }
 
     @Override
@@ -41,17 +39,7 @@ public class UserInterface implements UserIO {
     @Override
     public float readFloat(String prompt) {
         // refactor in loop
-        this.print(prompt);
-        boolean hasValue;
-        String value;
-        while (true) {
-            hasValue = this.userInput.hasNextFloat();
-            value = this.userInput.nextLine();
-            if (hasValue){
-                return Float.valueOf(value);
-            }
-            this.print("Please enter a float");
-        }
+        return (float) this.readNumber(prompt, "float");
     }
 
     @Override
@@ -70,18 +58,7 @@ public class UserInterface implements UserIO {
 
     @Override
     public int readInt(String prompt) {
-        // refactor in loop
-        this.print(prompt);
-        boolean hasValue;
-        String value;
-        while (true) {
-            hasValue = this.userInput.hasNextInt();
-            value = this.userInput.nextLine();
-            if (hasValue){
-                return Integer.valueOf(value);
-            }
-            this.print("Please enter an integer!");
-        }
+        return (int) this.readNumber(prompt, "integer");
     }
 
     @Override
@@ -100,14 +77,7 @@ public class UserInterface implements UserIO {
 
     @Override
     public long readLong(String prompt) {
-        // refactor with recursion
-        this.print(prompt);
-        boolean hasValue = this.userInput.hasNextLong();
-        String value = this.userInput.nextLine();
-        if (hasValue) {
-            return Long.valueOf(value);
-        }
-        return this.readLong("Please enter a long integer.");
+        return (long) this.readNumber(prompt, "long");
 
     }
 
@@ -129,6 +99,44 @@ public class UserInterface implements UserIO {
     public String readString(String prompt) {
         this.print(prompt);
         return this.userInput.nextLine();
+    }
+
+    public List<Integer> readIntArray(int size) {
+        // String typeName = array.getClass().getComponentType().getSimpleName();
+        this.print(String.format("Please enter %d numbers:", size));
+        List<Integer> array = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            array.add((Integer) this.readNumber("\b", "integer"));
+        }
+
+        return array;
+
+    }
+
+    private Number readNumber(String prompt, String typeString) {
+        Set<String> allowedType = new HashSet<>(Arrays.asList("integer", "long", "double", "float"));
+        this.print(prompt);
+        if (allowedType.contains(typeString.toLowerCase())) {
+            while (true) {
+                try {
+                    switch (typeString.toLowerCase()) {
+                        case "integer":
+                            return Integer.parseInt(this.userInput.nextLine());
+                        case "long":
+                            return Long.parseLong(this.userInput.nextLine());
+                        case "double":
+                            return Double.parseDouble(this.userInput.nextLine());
+                        case "float":
+                            return Float.parseFloat(this.userInput.nextLine());
+                    }
+                } catch (Exception e) {
+                    this.print("please enter a " + typeString.toLowerCase());
+                }
+            }
+        } else {
+            throw new RuntimeException("Bad.");
+        }
+
     }
 
 }

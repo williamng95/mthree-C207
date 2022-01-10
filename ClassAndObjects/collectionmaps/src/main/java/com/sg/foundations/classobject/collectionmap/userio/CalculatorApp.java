@@ -30,7 +30,7 @@ public class CalculatorApp {
     private void computeResult(int choice) {
         double result = 0;
         System.out.println("Please provide 2 numbers: ");
-        double firstNum = userInput.readDouble("First Number: ");
+        double firstNum = userInput.readFloat("First Number: ");
         double secondNum = userInput.readDouble("Second Number: ");
         ;
         userInput.print(String.format("You chose to %s %f and %f.%n", this.menuOptions[choice].toLowerCase(), firstNum,

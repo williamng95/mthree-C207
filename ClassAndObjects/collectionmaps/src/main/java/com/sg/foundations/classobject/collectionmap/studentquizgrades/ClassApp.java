@@ -65,7 +65,7 @@ public class ClassApp extends UserInterface {
 
                 break;
             case 3:
-            // print average score of all students
+                // print average score of all students
                 this.printClassAverage();
                 break;
             default:
@@ -78,6 +78,15 @@ public class ClassApp extends UserInterface {
         switch (this.printMenu(Arrays.asList(addOptions))) {
             case 1:
                 this.addStudentPrompt();
+                break;
+            case 2:
+                this.setStudentWithScore("New Student's name?:", "add");
+                break;
+            case 3:
+                this.setStudentWithScore("Whose score to reset?:", "set");
+                break;
+            case 4:
+                this.addStudentScores();
                 break;
 
             default:
@@ -148,15 +157,40 @@ public class ClassApp extends UserInterface {
         }
     }
 
-    public void addStudentPrompt() {
-        this.studentClass.addStudent(this.readString("New Student's name:"));
+    public String addStudentPrompt() {
+        String studentName = this.readString("New Student's name:");
+        this.studentClass.addStudent(studentName);
+        return studentName;
+    }
+
+    private List<Integer> addQuizArray(int size) {
+        List<Integer> scoreList = this.readIntArray(size);
+        this.print(scoreList.toString());
+        return scoreList;
+    }
+
+    public void setStudentWithScore(String prompt, String modifier) {
+        String studentName = this.readString(prompt);
+        List<Integer> studentScore = this
+                .addQuizArray(this.readInt(String.format("How many quiz scores to %s?", modifier)));
+        this.studentClass.addStudent(studentName, studentScore);
+    }
+
+    public void addStudentScores() {
+        String studentName = this.readString("Who to add new scores for?:");
+        List<Integer> studentScore = this
+                .addQuizArray(this.readInt(String.format("How many quiz scores to add?")));
+        this.studentClass.addScores(studentName, studentScore);
     }
 
     public void removeStudent() {
         String studentName = this.readString("Who would you like to remove from the class roster?");
         if (studentClass.removeStudent(studentName)) {
             this.print(String.format("Student %s has been removed.", studentName));
+            return;
         }
+        this.print(String.format("Student %s does not exist.", studentName));
+
     }
 
 }

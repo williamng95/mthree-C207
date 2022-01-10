@@ -38,13 +38,21 @@ public class QuizClass {
 
     // convenice method to add on quiz scores
     public void addScores(String studentName, List<Integer> quizScores) {
-        studentDB.get(studentName).addAll(quizScores);
-        userInput.print(String.format("Student %s's new quiz scores have been added on.", studentName));
+        if (studentDB.containsKey(studentName)) {
+            studentDB.get(studentName).addAll(quizScores);
+            userInput.print(String.format("Student %s's new quiz scores have been added on.", studentName));
+        } else {
+            userInput.print("Student does not exist, try again!");
+        }
+
     }
 
     public boolean removeStudent(String studentName) {
-        studentDB.remove(studentName);
-        return true;
+        if (studentDB.keySet().contains(studentName)) {
+            studentDB.remove(studentName);
+            return true;
+        }
+        return false;
     }
 
     public Set<String> getStudentList() {
