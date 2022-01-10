@@ -9,7 +9,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class StateCapitals2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Map<String, String> stateCapitals = readFile("StateCapitals.txt");
         Random rng = new Random();
         Scanner userInput = new Scanner(System.in);
@@ -33,16 +33,16 @@ public class StateCapitals2 {
 
     }
 
-    public static Map<String, String> readFile(String fileName) {
+    // remove try resource to demo unhandled throw except,
+    // refer to statecapitals3 for try resource handling
+    public static Map<String, String> readFile(String fileName) throws Exception {
         Map<String, String> fileMap = new HashMap<>();
-        try (Scanner fileScan = new Scanner(Paths.get(fileName))) {
-            while (fileScan.hasNextLine()) {
-                String[] mapPair = fileScan.nextLine().split("::");
-                fileMap.put(mapPair[0], mapPair[1]);
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        Scanner fileScan = new Scanner(Paths.get(fileName));
+        while (fileScan.hasNextLine()) {
+            String[] mapPair = fileScan.nextLine().split("::");
+            fileMap.put(mapPair[0], mapPair[1]);
         }
+
         return fileMap;
     }
 }
