@@ -2,7 +2,7 @@ package com.sg.oop.addressbook.dto;
 
 public class Address {
     private String firstName, lastname, streetAddress, townName, state;
-    int zipeCode;
+    int zipCode;
     public String getFirstName() {
         return firstName;
     }
@@ -33,11 +33,11 @@ public class Address {
     public void setState(String state) {
         this.state = state;
     }
-    public int getZipeCode() {
-        return zipeCode;
+    public int getZipCode() {
+        return zipCode;
     }
-    public void setZipeCode(int zipeCode) {
-        this.zipeCode = zipeCode;
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
     }
     
 }
