@@ -8,45 +8,33 @@ import java.util.Map;
 import com.sg.oop.addressbook.dto.Address;
 
 public class AddressBookDaoMemImpl implements AddressBookDao {
-    // keep a map of address list, associate with lastname.
-    protected Map<String, List<Address>> addressBook = new HashMap<>();
+    // keep a map of address, associate with lastname. Assume last name is unique key, no duplicates
+    protected Map<String, Address> addressBook = new HashMap<>();
 
     @Override
     public boolean addAddress(Address addressToAdd) {
-        String lastName = addressToAdd.getLastname();
-        List<Address> addressAsList = new ArrayList<>();
-        addressAsList.add(addressToAdd);
-        if (addressBook.containsKey(lastName)){
-            addressBook.get(lastName).addAll(addressAsList);
-            return true;
-        }
-        addressBook.put(lastName, addressAsList);
+        addressBook.put(addressToAdd.getLastname(), addressToAdd);
         return true;
     }
 
     @Override
-    public List<Address> addressByLastName(String lastName) {
-        // TODO Auto-generated method stub
-        return null;
+    public Address addressByLastName(String lastName) {
+        return addressBook.get(lastName);
     }
 
     @Override
     public int countAddress() {
-        // TODO Auto-generated method stub
-        return 0;
+        return addressBook.values().size();
     }
 
     @Override
     public List<Address> getAllAddress() {
-        List<Address> allAddress = new ArrayList<>();
-        System.out.println(addressBook.values().toString());
-        return allAddress;
+        return new ArrayList<Address>(addressBook.values());
     }
 
     @Override
     public Address removeAddress(Address addressToRemove) {
-        // TODO Auto-generated method stub
-        return null;
+        return addressBook.remove(addressToRemove.getLastname());
     }
     
 }

@@ -1,14 +1,12 @@
 package com.sg.oop.addressbook.controller;
 
 import com.sg.oop.addressbook.dao.AddressBookDao;
+import com.sg.oop.addressbook.dto.Address;
 import com.sg.oop.addressbook.ui.AddressBookView;
-import com.sg.oop.addressbook.ui.UserIO;
-import com.sg.oop.addressbook.ui.UserIOConsoleImpl;
 
 public class AddressBookController {
     private AddressBookDao dao;
     private AddressBookView ui;
-    private UserIO io = new UserIOConsoleImpl();
 
     public AddressBookController(AddressBookDao dao, AddressBookView ui) {
         this.dao = dao;
@@ -16,27 +14,72 @@ public class AddressBookController {
     }
 
     public void run() {
-        try {
-            switch (getMenuSelction()) {
-                case 1:
-                    io.print("1.");
-                    break;
-                case 5:
-                    dao.getAllAddress();
-                default:
-                    break;
+        boolean continueRun = true;
+        while (continueRun) {
+            try {
+                switch (getMenuSelction()) {
+                    case 1:
+                        addAddressMenu();
+                        break;
+                    case 2:
+                        deleteAddress();
+                        break;
+                    case 3:
+                        findAddress();
+                        break;
+                    case 4:
+                        addressCount();
+                        break;
+                    case 5:
+                        displayAllAddress();
+                        break;
+                    case 6:
+                    default:
+                        continueRun = false;
+                        break;
+                }
+            } catch (Exception e) {
+                ui.printExceptionMessage(e);
             }
-        } catch (Exception e) {
-            io.print(e.getMessage());
         }
     }
 
     private int getMenuSelction() {
         return ui.displayMenuAndGetOption();
     }
-    private void addAddressMenu(){
-        if (dao.addAddress(ui.getAddressInfo())){
-            ui.returnToMenu("");
+
+    private void addAddressMenu() {
+        ui.printAddBanner();
+        if (dao.addAddress(ui.getAddressInfo())) {
+            ui.addAddressSuccess();
         }
+    }
+
+    private void deleteAddress() {
+        ui.printDeleteBanner();
+        Address addressToRemove = dao.addressByLastName(ui.getDeleteName());
+        if (ui.printFindResults(addressToRemove) && ui.getDeleteConfirm()){
+            dao.removeAddress(addressToRemove);
+            ui.printDeleteSuccess();
+        }else{
+            ui.defaultReturntoMenu();
+        }
+
+    }
+
+    private void findAddress() {
+        ui.printFindBanner();
+        ui.printFindResults(dao.addressByLastName(ui.getFindName()));
+        ui.defaultReturntoMenu();
+    }
+
+    private void addressCount() {
+        ui.printCountBanner();
+        ui.printAddressCount(dao.countAddress());
+    }
+
+    private void displayAllAddress() {
+        ui.printListBanner();
+        ui.printAddressList(dao.getAllAddress());
     }
 }

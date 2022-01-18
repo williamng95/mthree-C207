@@ -27,12 +27,12 @@ public class UserIOConsoleImpl implements UserIO {
         while (true) {
             number = this.readDouble(prompt);
             if (number >= min && number <= max) {
-                break;
+                return number;
             } else {
                 this.print(String.format("The number provided is out of range %f - %f, please try again.", min, max));
             }
         }
-        return number;
+        
     }
 
     @Override
@@ -47,12 +47,11 @@ public class UserIOConsoleImpl implements UserIO {
         while (true) {
             number = this.readFloat(prompt);
             if (number >= min && number <= max) {
-                break;
+                return number;
             } else {
                 prompt = (String.format("The number provided is out of range %f - %f, please try again.", min, max));
             }
         }
-        return number;
     }
 
     @Override
@@ -66,12 +65,11 @@ public class UserIOConsoleImpl implements UserIO {
         while (true) {
             number = this.readInt(prompt);
             if (number >= min && number <= max) {
-                break;
+                return number;
             } else {
                 prompt = (String.format("The number provided is out of range %d - %d, please try again.", min, max));
             }
         }
-        return number;
     }
 
     @Override
@@ -86,12 +84,11 @@ public class UserIOConsoleImpl implements UserIO {
         while (true) {
             number = this.readLong(prompt);
             if (number >= min && number <= max) {
-                break;
+                return number;
             } else {
                 prompt = String.format("The number provided is out of range %d - %d, please try again.", min, max);
             }
         }
-        return number;
     }
 
     @Override

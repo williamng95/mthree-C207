@@ -38,12 +38,13 @@ public class ClassRosterController {
                         unknownCommand();
                 }
 
-                exitMessage();
+                
 
             }
         } catch (ClassRosterDaoException e) {
             ui.displayErrorMsg(e.getMessage());
         }
+        exitMessage();
     }
 
     private int getMenuSelection() {

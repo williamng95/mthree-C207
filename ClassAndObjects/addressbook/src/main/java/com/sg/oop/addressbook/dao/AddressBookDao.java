@@ -26,9 +26,9 @@ public interface AddressBookDao {
      * find the list of addresses, given a last name
      * 
      * @param lastName
-     * @return List of address associated with lastName.
+     * @return last address associated with last name.
      */
-    List<Address> addressByLastName(String lastName);
+    Address addressByLastName(String lastName);
 
     /**
      * Counts the number of addresses contained in the dao
