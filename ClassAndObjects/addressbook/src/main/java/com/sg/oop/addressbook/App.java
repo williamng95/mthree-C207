@@ -2,6 +2,7 @@ package com.sg.oop.addressbook;
 
 import com.sg.oop.addressbook.controller.AddressBookController;
 import com.sg.oop.addressbook.dao.AddressBookDao;
+import com.sg.oop.addressbook.dao.AddressBookDaoFileImpl;
 import com.sg.oop.addressbook.dao.AddressBookDaoMemImpl;
 import com.sg.oop.addressbook.ui.AddressBookView;
 import com.sg.oop.addressbook.ui.UserIOConsoleImpl;
@@ -19,7 +20,7 @@ public final class App {
      */
     public static void main(String[] args) {
         AddressBookView ui = new AddressBookView(new UserIOConsoleImpl());
-        AddressBookDao dao = new AddressBookDaoMemImpl();
+        AddressBookDao dao = new AddressBookDaoFileImpl(new AddressBookDaoMemImpl());
         AddressBookController controller = new AddressBookController(dao, ui);
         controller.run();
     }

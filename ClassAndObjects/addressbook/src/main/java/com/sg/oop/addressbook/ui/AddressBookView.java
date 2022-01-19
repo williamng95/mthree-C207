@@ -6,7 +6,7 @@ import com.sg.oop.addressbook.dto.Address;
 
 public class AddressBookView {
     private UserIO io;
-    private String[] menuOptions = { "Add Address", "Delete Address", "Find Address", "List Address Count",
+    private String[] menuOptions = { "Add Address", "Delete Address", "Find Address", "Edit Address", "List Address Count",
             "List All Addresses", "Exit" };
 
     public AddressBookView(UserIO io) {
@@ -58,8 +58,13 @@ public class AddressBookView {
         printBanner("Add");
     }
 
-    public void addAddressSuccess() {
-        returnToMenu("Address added.");
+    public void putAddressResult(Address addressAdd) {
+        if (addressAdd == null){
+            returnToMenu("Address added.");
+        }else{
+            returnToMenu("Addrress Replaced.");
+        }
+        
     }
 
     // option 2: delete an address
@@ -104,8 +109,12 @@ public class AddressBookView {
     public void defaultReturntoMenu() {
         returnToMenu("");
     }
+// option 4: edit address
+public void printEditBanner(){
+    printBanner("Edit");
+}
 
-    // option 4: count total number of addreses
+    // option 5: count total number of addreses
     public void printCountBanner() {
         printBanner("List Count");
     }
@@ -114,7 +123,7 @@ public class AddressBookView {
         returnToMenu(String.format("There are %d addresses in the book.", count));
     }
 
-    // option 5: list all addresses
+    // option 6: list all addresses
     public void printListBanner() {
         printBanner("List");
     }

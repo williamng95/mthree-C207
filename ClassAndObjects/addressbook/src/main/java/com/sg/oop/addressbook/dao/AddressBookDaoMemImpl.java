@@ -12,9 +12,8 @@ public class AddressBookDaoMemImpl implements AddressBookDao {
     protected Map<String, Address> addressBook = new HashMap<>();
 
     @Override
-    public boolean addAddress(Address addressToAdd) {
-        addressBook.put(addressToAdd.getLastname(), addressToAdd);
-        return true;
+    public Address addAddress(Address addressToAdd) {
+        return addressBook.put(addressToAdd.getLastname(), addressToAdd);
     }
 
     @Override

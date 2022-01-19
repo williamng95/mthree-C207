@@ -1,6 +1,7 @@
 package com.sg.oop.addressbook.controller;
 
 import com.sg.oop.addressbook.dao.AddressBookDao;
+import com.sg.oop.addressbook.dao.AddressBookDaoException;
 import com.sg.oop.addressbook.dto.Address;
 import com.sg.oop.addressbook.ui.AddressBookView;
 
@@ -28,12 +29,15 @@ public class AddressBookController {
                         findAddress();
                         break;
                     case 4:
-                        addressCount();
+                        editAddress();
                         break;
                     case 5:
-                        displayAllAddress();
+                        addressCount();
                         break;
                     case 6:
+                        displayAllAddress();
+                        break;
+                    case 7:
                     default:
                         continueRun = false;
                         break;
@@ -48,37 +52,40 @@ public class AddressBookController {
         return ui.displayMenuAndGetOption();
     }
 
-    private void addAddressMenu() {
+    private void addAddressMenu() throws AddressBookDaoException {
         ui.printAddBanner();
-        if (dao.addAddress(ui.getAddressInfo())) {
-            ui.addAddressSuccess();
-        }
+        ui.putAddressResult(dao.addAddress(ui.getAddressInfo()));
     }
 
-    private void deleteAddress() {
+    private void deleteAddress() throws AddressBookDaoException {
         ui.printDeleteBanner();
         Address addressToRemove = dao.addressByLastName(ui.getDeleteName());
-        if (ui.printFindResults(addressToRemove) && ui.getDeleteConfirm()){
+        if (ui.printFindResults(addressToRemove) && ui.getDeleteConfirm()) {
             dao.removeAddress(addressToRemove);
             ui.printDeleteSuccess();
-        }else{
+        } else {
             ui.defaultReturntoMenu();
         }
 
     }
 
-    private void findAddress() {
+    private void findAddress() throws AddressBookDaoException {
         ui.printFindBanner();
         ui.printFindResults(dao.addressByLastName(ui.getFindName()));
         ui.defaultReturntoMenu();
     }
 
-    private void addressCount() {
+    private void editAddress() throws AddressBookDaoException {
+        ui.printEditBanner();
+        ui.putAddressResult(dao.addAddress(ui.getAddressInfo()));
+    }
+
+    private void addressCount() throws AddressBookDaoException {
         ui.printCountBanner();
         ui.printAddressCount(dao.countAddress());
     }
 
-    private void displayAllAddress() {
+    private void displayAllAddress() throws AddressBookDaoException {
         ui.printListBanner();
         ui.printAddressList(dao.getAllAddress());
     }
