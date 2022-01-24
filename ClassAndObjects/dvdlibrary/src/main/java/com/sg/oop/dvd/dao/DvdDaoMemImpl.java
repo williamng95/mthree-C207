@@ -1,51 +1,45 @@
 package com.sg.oop.dvd.dao;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.sg.oop.dvd.dto.Dvd;
 
-public class DvdDaoMemImpl implements DvdDao{
-    private Set<Dvd> dvdDB = new HashSet<>();
+public class DvdDaoMemImpl implements DvdDao {
+    private Map<String, Dvd> dvdDB = new HashMap<>();
 
     public void loadDvdFile(String filePath) {
         // TODO Auto-generated method stub
-        
+
     }
 
     public void saveDvdFile(String filePath) {
         // TODO Auto-generated method stub
-        
+
     }
 
     @Override
-    public boolean addDvd(Dvd dvdToAdd) {
-        return dvdDB.add(dvdToAdd);
+    public Dvd addDvd(Dvd dvdToAdd) {
+        return dvdDB.put(dvdToAdd.getTitle(), dvdToAdd);
     }
 
     @Override
     public Dvd dvdByTitle(String titleName) {
-        // TODO Auto-generated method stub
-        return null;
+        return dvdDB.get(titleName);
     }
 
     @Override
     public Dvd[] dvdList() {
-        return dvdDB.toArray(new Dvd[0]);
+        return dvdDB.values().toArray(new Dvd[0]);
     }
 
     @Override
-    public boolean editDvd(Dvd newDvd) {
-        // TODO Auto-generated method stub
-        return false;
+    public Dvd editDvd(Dvd dvdToEdit) {
+        return dvdDB.replace(dvdToEdit.getTitle(), dvdToEdit);
     }
 
     @Override
-    public boolean removeDvd(Dvd dvdToRemove) {
-        return dvdDB.remove(dvdToRemove);
+    public Dvd removeDvd(String removeTitlename) {
+        return dvdDB.remove(removeTitlename);
     }
-
-    
-    
-    
 }

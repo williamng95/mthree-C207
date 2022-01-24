@@ -10,11 +10,6 @@ import java.util.Set;
 
 public class UserIOConsoleImpl implements UserIO {
 
-    @Override
-    public LocalDate readDate(int year, int month, int dayOfMonth) {
-        return LocalDate.of(year, month, dayOfMonth);
-    }
-
     private Scanner userInput = new Scanner(System.in);
 
     @Override
@@ -38,7 +33,7 @@ public class UserIOConsoleImpl implements UserIO {
                 this.print(String.format("The number provided is out of range %f - %f, please try again.", min, max));
             }
         }
-        
+
     }
 
     @Override
@@ -139,6 +134,24 @@ public class UserIOConsoleImpl implements UserIO {
             throw new RuntimeException("Bad.");
         }
 
+    }
+
+    @Override
+    public LocalDate readDate(String prompt) {
+        // recursion to handle catch
+        String[] dateStringTokens = this.readString(prompt + "\nDate Format: dd/mm/yyyy").split("/");
+        LocalDate dateParse;
+        try {
+            int year = Integer.parseInt(dateStringTokens[2]);
+            int month = Integer.parseInt(dateStringTokens[1]);
+            int dayOfMonth = Integer.parseInt(dateStringTokens[0]);
+            dateParse = LocalDate.of(year, month, dayOfMonth);
+        } catch (Exception e) {
+            print("Error encountered, please try again.");
+            dateParse = readDate(prompt);
+        }
+
+        return dateParse;
     }
 
 }

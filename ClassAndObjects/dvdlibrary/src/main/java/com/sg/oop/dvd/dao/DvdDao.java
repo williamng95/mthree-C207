@@ -4,11 +4,11 @@ import com.sg.oop.dvd.dto.Dvd;
 
 public interface DvdDao {
 
-    public boolean addDvd(Dvd dvdToAdd);
+    public Dvd addDvd(Dvd dvdToAdd);
 
-    public boolean removeDvd(Dvd dvdToRemove);
+    public Dvd removeDvd(String titleName);
 
-    public boolean editDvd(Dvd newDvd);
+    public Dvd editDvd(Dvd newDvd);
 
     public Dvd[] dvdList();
 

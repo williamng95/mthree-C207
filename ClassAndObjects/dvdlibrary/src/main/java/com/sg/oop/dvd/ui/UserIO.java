@@ -24,5 +24,5 @@ public interface UserIO {
 
     String readString(String prompt);
 
-    LocalDate readDate(int year, int month, int day);
+    LocalDate readDate(String prompt);
 }
