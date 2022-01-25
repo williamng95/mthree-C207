@@ -4,14 +4,14 @@ import com.sg.oop.dvd.dto.Dvd;
 
 public interface DvdDao {
 
-    public Dvd addDvd(Dvd dvdToAdd);
+    public Dvd addDvd(Dvd dvdToAdd) throws DvdDaoException;
 
-    public Dvd removeDvd(String titleName);
+    public Dvd removeDvd(String titleName) throws DvdDaoException;
 
-    public Dvd editDvd(Dvd newDvd);
+    public Dvd editDvd(Dvd newDvd) throws DvdDaoException;
 
-    public Dvd[] dvdList();
+    public Dvd[] dvdList() throws DvdDaoException;
 
-    public Dvd dvdByTitle(String titleName);
+    public Dvd dvdByTitle(String titleName) throws DvdDaoException;
 
 }

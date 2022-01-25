@@ -19,8 +19,11 @@ public class DvdLibraryView {
         this.io = io;
     }
 
-    private Dvd getDvdInfo() {
-        String title = io.readString("Movie Title:");
+    private Dvd getDvdInfo(String title) {
+        if (title == null) {
+            // share method for create and edit
+            title = io.readString("Movie Title:");
+        }
         String directorName = io.readString("Director's Name:");
         String studioName = io.readString("Studio Name");
         String mpaaRating = io.readString("MPAA rating:");
@@ -42,17 +45,16 @@ public class DvdLibraryView {
         return io.readInt("", 1, menuOptions.length);
     }
 
+    private void printDvdInfo(Dvd dvd) {
+        io.print(dvd.toString());
+    }
+
     private void printMenuBanner(String menuType) {
         io.print("");
         io.print(String.format("===== %s =====", menuType));
     }
 
-    public Dvd getNewDvd() {
-        printMenuBanner("Add a New DVD");
-        return getDvdInfo();
-    }
-
-    public void endOpPause(){
+    public void endOpPause() {
         io.readString("Press Enter to continue...");
     }
 
@@ -65,23 +67,68 @@ public class DvdLibraryView {
 
     }
 
+    // 1. add DVD
+    public Dvd getNewDvd() {
+        printMenuBanner("Add a New DVD");
+        return getDvdInfo(null);
+    }
+
     public void addDvdStatus(Dvd dvdStatus) {
         dvdDBStatus(dvdStatus, "New movie has been added.", "edited");
     }
+
+    // 2: remove DVD
 
     public String getRemoveDvdTitle() {
         printMenuBanner("Remove a DVD");
         return getDvdTitle("remove");
     }
 
-    public void removeDvdStatus(Dvd dvdStatus){
+    public void removeDvdStatus(Dvd dvdStatus) {
         dvdDBStatus(dvdStatus, "No such DVD found", "removed");
     }
+    // 3. edit a DVD
 
+    public String getEditDvdTitle() {
+        printMenuBanner("Edit a DVD");
+        return getDvdTitle("edit");
+    }
+
+    public Dvd getEditDvdDetails(String dvdTitle, Dvd currentDvd) {
+        // only retrieve info from user if there is a DVD matching
+        if (currentDvd != null){
+            return getDvdInfo(dvdTitle);
+        }else{
+            return null;
+        }
+        
+    }
+
+    public void printEditStatus(Dvd editStatus){
+        dvdDBStatus(editStatus, "No such DVD found", "edited");
+    }
+
+    // 4. print list of DVDs
     public void printDvdList(Dvd[] dvdList) {
         for (Dvd dvd : dvdList) {
-            io.print(dvd.toString());
+            printDvdInfo(dvd);
         }
 
+    }
+
+    // 5. find a DVD
+
+    public String getFindDvdTitle() {
+        printMenuBanner("Search for DVD by title");
+        return getDvdTitle("find");
+    }
+
+    public void printSearchResults(Dvd dvd) {
+        if (dvd != null) {
+            io.print("DVD found:");
+            printDvdInfo(dvd);
+        } else {
+            io.print("No DVD with that title was found.");
+        }
     }
 }

@@ -1,7 +1,7 @@
 package com.sg.oop.dvd;
 
 import com.sg.oop.dvd.controller.DvdController;
-import com.sg.oop.dvd.dao.DvdDaoMemImpl;
+import com.sg.oop.dvd.dao.DvdDaoFileImpl;
 import com.sg.oop.dvd.ui.DvdLibraryView;
 import com.sg.oop.dvd.ui.UserIOConsoleImpl;
 
@@ -17,7 +17,7 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        DvdController dvdControl = new DvdController(new DvdDaoMemImpl(), new DvdLibraryView(new UserIOConsoleImpl()));
+        DvdController dvdControl = new DvdController(new DvdDaoFileImpl(), new DvdLibraryView(new UserIOConsoleImpl()));
         dvdControl.run();
     }
 }
