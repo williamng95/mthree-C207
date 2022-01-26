@@ -10,8 +10,18 @@ import java.util.Scanner;
 import com.sg.classroster.dto.Student;
 
 public class ClassRosterDaoFileImpl extends ClassRosterDaoMemImpl {
-    public static final String ROSTER_FILE = "roster.txt";
+    public final String ROSTER_FILE;
     public static final String DELIMITER = "::";
+
+    
+
+    public ClassRosterDaoFileImpl() {
+        ROSTER_FILE = "roster.txt";
+    }
+
+    public ClassRosterDaoFileImpl(String rosterFilePath) {
+        ROSTER_FILE = rosterFilePath;
+    }
 
     private void loadRoster() throws ClassRosterPersistenceException {
         try (Scanner fileScan = new Scanner(Paths.get(ROSTER_FILE))) {
