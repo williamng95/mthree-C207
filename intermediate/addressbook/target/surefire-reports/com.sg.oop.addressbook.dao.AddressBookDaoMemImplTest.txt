@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.oop.addressbook.dao.AddressBookDaoMemImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.1 s <<< FAILURE! - in com.sg.oop.addressbook.dao.AddressBookDaoMemImplTest
+com.sg.oop.addressbook.dao.AddressBookDaoMemImplTest.testAddGetAddress  Time elapsed: 0.013 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: First Name does not match. ==> expected: <John> but was: <DDD>
+
