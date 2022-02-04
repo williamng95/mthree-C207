@@ -46,7 +46,7 @@ public abstract class AddressBookDaoAbsTest {
         this.ADDRESS_2 = address2;
     }
 
-    abstract void setUp();
+    abstract void setUp() throws Exception;
 
     @Test
     void testAddGetAddress() throws AddressBookDaoException {
