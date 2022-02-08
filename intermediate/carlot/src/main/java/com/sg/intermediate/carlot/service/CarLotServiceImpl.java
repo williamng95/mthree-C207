@@ -26,7 +26,7 @@ public class CarLotServiceImpl implements CarLotService {
     @Override
     public Car getACar(String VIN) {
         // TODO Auto-generated method stub
-        return null;
+        return dao.getCar(VIN);
     }
 
     @Override

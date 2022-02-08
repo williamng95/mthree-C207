@@ -132,4 +132,86 @@ public class Car {
         this.key = key;
     }
 
+    // generic object things
+
+    /* hashcode
+     * @see java.lang.Object#hashCode()
+     */
+    
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((VIN == null) ? 0 : VIN.hashCode());
+        result = prime * result + ((color == null) ? 0 : color.hashCode());
+        result = prime * result + ((key == null) ? 0 : key.hashCode());
+        result = prime * result + ((make == null) ? 0 : make.hashCode());
+        result = prime * result + ((model == null) ? 0 : model.hashCode());
+        result = prime * result + (int) (odometerMiles ^ (odometerMiles >>> 32));
+        result = prime * result + ((price == null) ? 0 : price.hashCode());
+        return result;
+    }
+
+    /* equals for comparison
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Car other = (Car) obj;
+        if (VIN == null) {
+            if (other.VIN != null)
+                return false;
+        } else if (!VIN.equals(other.VIN))
+            return false;
+        if (color == null) {
+            if (other.color != null)
+                return false;
+        } else if (!color.equals(other.color))
+            return false;
+        if (key == null) {
+            if (other.key != null)
+                return false;
+        } else if (!key.equals(other.key))
+            return false;
+        if (make == null) {
+            if (other.make != null)
+                return false;
+        } else if (!make.equals(other.make))
+            return false;
+        if (model == null) {
+            if (other.model != null)
+                return false;
+        } else if (!model.equals(other.model))
+            return false;
+        if (odometerMiles != other.odometerMiles)
+            return false;
+        if (price == null) {
+            if (other.price != null)
+                return false;
+        } else if (!price.equals(other.price))
+            return false;
+        return true;
+    }
+
+    /* String rep of object
+     * @see java.lang.Object#toString()
+     */
+    
+    @Override
+    public String toString() {
+        return "Car [VIN=" + VIN + ", color=" + color + ", key=" + key + ", make=" + make + ", model=" + model
+                + ", odometerMiles=" + odometerMiles + ", price=" + price + "]";
+    }
+
+    
+
+    
+
 }
