@@ -46,7 +46,7 @@ public class CarLotServiceImplTest {
     @Test
     void testInvalidDiscountCar() {
         // check that exception is thrown when VIN invalid VIN requested
-        assertThrows(NoSuchCarException.class, () -> testService.getACar(CAR_VINS[CAR_VINS.length - 1]));
+        assertThrows(NoSuchCarException.class, () -> testService.discountCar(CAR_VINS[CAR_VINS.length - 1], new BigDecimal("1")));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class CarLotServiceImplTest {
 
         assertTrue(returnPrice.compareTo(discountedPrice) == 0,
                 String.format("Discount not performed correctly, should be %f", discountedPrice));
-        assertEquals(discountedPrice, testService.getACar(CAR_VINS[0]),
+        assertEquals(discountedPrice, testService.getACar(CAR_VINS[0]).getPrice(),
                 "Discount Car should also edit the underlying Car object");
     }
 
@@ -122,10 +122,10 @@ public class CarLotServiceImplTest {
         BigDecimal maxPrice = new BigDecimal("100000");
         List<Car> retrievedList = testService.getCarsInBudget(maxPrice);
 
-        assertEquals(1, retrievedList.size(), "There should only be one car within the price budget");
+        assertEquals(2, retrievedList.size(), "There should only be one car within the price budget");
         for (Car car : retrievedList) {
-            // bigdecimal requires compareTo, -1 indicates caller is less than arg
-            assertTrue(car.getPrice().compareTo(maxPrice) < -1,
+            // bigdecimal requires compareTo, -1 indicates caller is less than arg, 0 indicates equality
+            assertTrue(car.getPrice().compareTo(maxPrice) <= 0,
                     String.format("Car should cost less than %.2f, but got %s", maxPrice, car.toString()));
         }
     }
@@ -151,5 +151,12 @@ public class CarLotServiceImplTest {
         }
         assertEquals(0, testService.getAllCars().size(), "there should not be any cars left");
 
+    }
+
+    @Test
+    void testInvalidSellCar() {
+        // check that exception is thrown when VIN invalid VIN requested
+        // cash paid set as 1, not important since car does not exist
+        assertThrows(NoSuchCarException.class, () -> testService.sellCar(CAR_VINS[CAR_VINS.length - 1], new BigDecimal("1")));
     }
 }
