@@ -134,10 +134,12 @@ public class Car {
 
     // generic object things
 
-    /* hashcode
+    /*
+     * hashcode
+     * 
      * @see java.lang.Object#hashCode()
      */
-    
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -152,10 +154,12 @@ public class Car {
         return result;
     }
 
-    /* equals for comparison
+    /*
+     * equals for comparison
+     * 
      * @see java.lang.Object#equals(java.lang.Object)
      */
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -200,18 +204,16 @@ public class Car {
         return true;
     }
 
-    /* String rep of object
+    /*
+     * String rep of object
+     * 
      * @see java.lang.Object#toString()
      */
-    
+
     @Override
     public String toString() {
         return "Car [VIN=" + VIN + ", color=" + color + ", key=" + key + ", make=" + make + ", model=" + model
                 + ", odometerMiles=" + odometerMiles + ", price=" + price + "]";
     }
-
-    
-
-    
 
 }

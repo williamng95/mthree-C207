@@ -21,7 +21,7 @@ public class CarLotServiceImpl implements CarLotService {
     @Override
     public BigDecimal discountCar(String VIN, BigDecimal percentDiscount) throws NoSuchCarException {
         Car carToDiscount = dao.getCar(VIN);
-        if (carToDiscount == null){
+        if (carToDiscount == null) {
             throw new NoSuchCarException("No such car exists");
         }
         // calculate percent value remaining of car (1-(discount/100))
@@ -80,7 +80,7 @@ public class CarLotServiceImpl implements CarLotService {
     public CarKey sellCar(String VIN, BigDecimal cashPaid)
             throws NoSuchCarException, OverpaidPriceException, UnderpaidPriceException {
         Car retrievedCar = getACar(VIN);
-        if (retrievedCar == null){
+        if (retrievedCar == null) {
             throw new NoSuchCarException("Car does not exist");
         }
         switch (dao.getCar(VIN).getPrice().compareTo(cashPaid)) {
@@ -89,7 +89,7 @@ public class CarLotServiceImpl implements CarLotService {
             case 1:
                 throw new UnderpaidPriceException("Insufficient cash");
             case 0:
-               return dao.removeCar(VIN).getKey();
+                return dao.removeCar(VIN).getKey();
         }
         return null;
     }
