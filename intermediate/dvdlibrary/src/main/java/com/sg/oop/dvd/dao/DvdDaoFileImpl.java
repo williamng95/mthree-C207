@@ -13,31 +13,43 @@ public class DvdDaoFileImpl implements DvdDao {
     // default memory backend
     private DvdDao memImpl;
     private final String DELIMITER = "::";
-    private final String FILE_PATH = "dvdLibrary.txt";
+    private final String FILE_PATH;
 
     public DvdDaoFileImpl() {
+        this("dvdLibrary.txt");
+    }
+
+    public DvdDaoFileImpl(String filePath) {
         this.memImpl = new DvdDaoMemImpl();
+        this.FILE_PATH = filePath;
+    }
+
+    public DvdDaoFileImpl(DvdDao memImpl, String filePath) {
+        this.memImpl = memImpl;
+        this.FILE_PATH = filePath;
     }
 
     public DvdDaoFileImpl(DvdDao memImpl) {
-        this.memImpl = memImpl;
+        this(memImpl, "dvdLibrary.txt");
     }
 
     private String marshallDvd(Dvd dvdToMarshall) {
         return String.join(DELIMITER, dvdToMarshall.getTitle(), dvdToMarshall.getDirectorName(),
-                dvdToMarshall.getStudioName(), dvdToMarshall.getMpaaRating(), dvdToMarshall.getNote(), dvdToMarshall.getReleaseDate().toString(),
+                dvdToMarshall.getStudioName(), dvdToMarshall.getMpaaRating(), dvdToMarshall.getNote(),
+                dvdToMarshall.getReleaseDate().toString(),
                 String.valueOf(dvdToMarshall.getUserRating()));
     }
 
-    private Dvd unmarshallDvd(String parseLine){
+    private Dvd unmarshallDvd(String parseLine) {
         String[] dvdToken = parseLine.split(DELIMITER);
 
-        return new Dvd(dvdToken[0], dvdToken[1], dvdToken[2], dvdToken[3], dvdToken[4], LocalDate.parse(dvdToken[5]), Integer.parseInt(dvdToken[6]));
+        return new Dvd(dvdToken[0], dvdToken[1], dvdToken[2], dvdToken[3], dvdToken[4], LocalDate.parse(dvdToken[5]),
+                Integer.parseInt(dvdToken[6]));
 
     }
 
-    private void writeFile() throws DvdDaoException{
-        try (PrintWriter out = new PrintWriter(new FileWriter(FILE_PATH)) ) {
+    private void writeFile() throws DvdDaoException {
+        try (PrintWriter out = new PrintWriter(new FileWriter(FILE_PATH))) {
             for (Dvd currentDvd : memImpl.dvdList()) {
                 out.println(marshallDvd(currentDvd));
                 out.flush();
@@ -47,9 +59,9 @@ public class DvdDaoFileImpl implements DvdDao {
         }
     }
 
-    private void loadFile() throws DvdDaoException{
+    private void loadFile() throws DvdDaoException {
         try (Scanner fileScan = new Scanner(Paths.get(FILE_PATH))) {
-            while (fileScan.hasNextLine()){
+            while (fileScan.hasNextLine()) {
                 memImpl.addDvd(unmarshallDvd(fileScan.nextLine()));
             }
         } catch (Exception e) {

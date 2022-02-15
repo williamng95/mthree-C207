@@ -80,4 +80,74 @@ public class Dvd {
         this.userRating = userRating;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#hashCode()
+     */
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((directorName == null) ? 0 : directorName.hashCode());
+        result = prime * result + ((mpaaRating == null) ? 0 : mpaaRating.hashCode());
+        result = prime * result + ((note == null) ? 0 : note.hashCode());
+        result = prime * result + ((releaseDate == null) ? 0 : releaseDate.hashCode());
+        result = prime * result + ((studioName == null) ? 0 : studioName.hashCode());
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        result = prime * result + userRating;
+        return result;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Dvd other = (Dvd) obj;
+        if (directorName == null) {
+            if (other.directorName != null)
+                return false;
+        } else if (!directorName.equals(other.directorName))
+            return false;
+        if (mpaaRating == null) {
+            if (other.mpaaRating != null)
+                return false;
+        } else if (!mpaaRating.equals(other.mpaaRating))
+            return false;
+        if (note == null) {
+            if (other.note != null)
+                return false;
+        } else if (!note.equals(other.note))
+            return false;
+        if (releaseDate == null) {
+            if (other.releaseDate != null)
+                return false;
+        } else if (!releaseDate.equals(other.releaseDate))
+            return false;
+        if (studioName == null) {
+            if (other.studioName != null)
+                return false;
+        } else if (!studioName.equals(other.studioName))
+            return false;
+        if (title == null) {
+            if (other.title != null)
+                return false;
+        } else if (!title.equals(other.title))
+            return false;
+        if (userRating != other.userRating)
+            return false;
+        return true;
+    }
+
 }
