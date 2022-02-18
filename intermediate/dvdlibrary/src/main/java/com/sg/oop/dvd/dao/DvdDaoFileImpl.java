@@ -4,6 +4,8 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.sg.oop.dvd.dto.Dvd;
@@ -105,5 +107,51 @@ public class DvdDaoFileImpl implements DvdDao {
         writeFile();
         return result;
     }
+
+    @Override
+    public List<Dvd> dvdByMPAA(String MPAARating) throws DvdDaoException {
+        loadFile();
+        return memImpl.dvdByMPAA(MPAARating);
+    }
+
+    @Override
+    public List<Dvd> lookBackByYear(int numYears) throws DvdDaoException {
+        loadFile();
+        return memImpl.lookBackByYear(numYears);
+    }
+
+    @Override
+    public Map<String, List<Dvd>> dvdByDirector(String directorName) throws DvdDaoException {
+        loadFile();
+        return memImpl.dvdByDirector(directorName);
+    }
+
+    @Override
+    public List<Dvd> dvdByStudio(String studioName) throws DvdDaoException {
+        loadFile();
+        return memImpl.dvdByStudio(studioName);
+    }
+
+    @Override
+    public double dvdAverageAge() throws DvdDaoException {
+        loadFile();
+        return memImpl.dvdAverageAge();
+    }
+
+    @Override
+    public Dvd oldestMovie() throws DvdDaoException {
+        loadFile();
+        return memImpl.oldestMovie();
+    }
+
+    @Override
+    public Dvd newestMovie() throws DvdDaoException {
+        loadFile();
+        return memImpl.newestMovie();
+    }
+
+    
+    
+    
 
 }

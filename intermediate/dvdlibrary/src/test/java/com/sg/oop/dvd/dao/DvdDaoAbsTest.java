@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import com.sg.oop.dvd.dto.Dvd;
 
@@ -19,6 +20,7 @@ public abstract class DvdDaoAbsTest {
 
         Dvd dvd1 = new Dvd("Matirx", "Wachoski", "Fox", "R", "", LocalDate.of(1999, 1, 1), 10);
         Dvd dvd2 = new Dvd("Emoji", "Leondis", "Sony", "PG", "bad", LocalDate.of(2017, 1, 1), 0);
+        Dvd dvd3 = new Dvd("Igor", "Leondis", "Sony", "G", "aaaa", LocalDate.of(2008, 1, 1), 7);
 
         // to implement setup tests separately
         abstract void setUp() throws Exception;
@@ -127,4 +129,65 @@ public abstract class DvdDaoAbsTest {
 
                 }
         }
+
+        @Test
+        void testYearLookBack() throws DvdDaoException {
+                int numYears = 10;
+
+                testdao.addDvd(dvd1);
+                testdao.addDvd(dvd2);
+                List<Dvd> retrievedList = testdao.lookBackByYear(numYears);
+
+                assertEquals(1, retrievedList.size());
+                assertTrue(retrievedList.contains(dvd2));
+        }
+
+        
+        @Test
+        void testDirector() throws DvdDaoException {
+                String directorName = "Leondis";
+
+                testdao.addDvd(dvd1);
+                testdao.addDvd(dvd2);
+                testdao.addDvd(dvd3);
+                Map<String, List<Dvd>> retrievedMap = testdao.dvdByDirector(directorName);
+
+                assertNotNull(retrievedMap.get("G"));
+                assertEquals(1,retrievedMap.get("G").size());
+                assertTrue(retrievedMap.get("G").contains(dvd3));
+                
+                assertNotNull(retrievedMap.get("PG"));
+                assertEquals(1,retrievedMap.get("PG").size());
+                assertTrue(retrievedMap.get("PG").contains(dvd2));
+        }
+
+        @Test
+        void testByStudio() throws DvdDaoException {
+                String studioName = "Sony";
+
+                testdao.addDvd(dvd1);
+                testdao.addDvd(dvd2);
+                testdao.addDvd(dvd3);
+                List<Dvd> retrievedList = testdao.dvdByStudio(studioName);
+
+                assertEquals(2, retrievedList.size());
+                assertTrue(retrievedList.contains(dvd2));
+                assertTrue(retrievedList.contains(dvd3));
+        }
+
+        @Test
+        void testOldestNewestMovie() throws DvdDaoException{
+                testdao.addDvd(dvd1);
+                testdao.addDvd(dvd2);
+                testdao.addDvd(dvd3);
+                
+                Dvd oldestMovie = testdao.oldestMovie();
+
+                assertEquals(dvd1, oldestMovie);
+
+                Dvd newestMovie = testdao.newestMovie();
+
+                assertEquals(dvd2, newestMovie);
+        }
+
 }
